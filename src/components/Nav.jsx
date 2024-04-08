@@ -1,16 +1,55 @@
+import { Link, NavLink } from "react-router-dom";
 function Nav() {
   return (
-    <div>
-      <div className="flex flex-row justify-around items-center bg-cyan-50 h-20">
+    <div className="">
+      {/* fixed w-full */}
+      <div className="flex flex-row justify-around items-center bg-cyan-100 h-20">
         <div className="flex-intial w-40 ">
-          <img src="src/assets/logo.png" className="logo"></img>
+          <img src="" className="logo" alt="ToyWala"></img>
         </div>
         <div className="flex flex-intial w-auto justify-center">
           <ul className="text-xl flex gap-14 font-medium">
-            <li className="">Home</li>
-            <li className="">Product</li>
-            <li className="">Contact</li>
-            <li className="">About</li>
+            <li>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `${isActive ? "text-orange-700" : "text-gray-800"}`
+                }
+              >
+                Home
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
+                to="/Product"
+                className={({ isActive }) =>
+                  `${isActive ? "text-orange-700" : "text-gray-800"}`
+                }
+              >
+                Product
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/Contact"
+                className={({ isActive }) =>
+                  `${isActive ? "text-orange-700" : "text-gray-800"}`
+                }
+              >
+                Contact
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/About"
+                className={({ isActive }) =>
+                  `${isActive ? "text-orange-700" : "text-gray-800"}`
+                }
+              >
+                About
+              </NavLink>
+            </li>
           </ul>
         </div>
         {/* right nav */}
@@ -63,13 +102,12 @@ function Nav() {
           </svg>
 
           {/* login button */}
-          <button className="text-xl border rounded px-2 py-1 bg-rose-500">
-            Log In
-          </button>
+          <Link to="/Login">
+            <button className="text-xl border rounded-md px-2 py-1 bg-orange-600">
+              Log In
+            </button>
+          </Link>
         </div>
-      </div>
-      <div className="bg-cyan-50 rotate-180">
-        <img src="src/assets/ripped-paper-white-up.png"></img>
       </div>
     </div>
   );
