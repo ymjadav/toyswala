@@ -1,4 +1,3 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -10,6 +9,8 @@ import Product from "./components/Product.jsx";
 import Contact from "./components/Contact.jsx";
 import Signup from "./components/Signup-page.jsx";
 import ForgetPasword from "./components/Forget-password.jsx";
+import { Provider } from 'react-redux';
+import store from './redux/store.js';
 
 const router = createBrowserRouter([
   {
@@ -46,7 +47,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  <Provider store={store}>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </Provider>
 );
