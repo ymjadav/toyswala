@@ -1,11 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
+import logo from "../assets/toywala-logo-transparent.png";
 function Nav() {
   return (
     <div className="">
       {/* fixed w-full */}
       <div className="flex flex-row justify-around items-center bg-cyan-100 h-20">
         <div className="flex-intial w-40 ">
-          <img src="" className="logo" alt="ToyWala"></img>
+          <img src={logo} className="logo h-14" alt="TOYWALA"></img>
         </div>
         <div className="flex flex-intial w-auto justify-center">
           <ul className="text-xl flex gap-14 font-medium">
@@ -103,8 +104,8 @@ function Nav() {
 
           {/* login button */}
           <Link to="/Login">
-            <button className="text-xl border rounded-md px-2 py-1 bg-orange-600">
-              Log In
+            <button className="text-lg text-white border rounded-md px-2 py-1 bg-violet-700 hover:bg-violet-600">
+              Login
             </button>
           </Link>
         </div>

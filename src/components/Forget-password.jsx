@@ -1,4 +1,4 @@
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 export default function forgetpassword() {
   return (
     <>
@@ -79,12 +79,14 @@ export default function forgetpassword() {
                   </label>
                 </div>
               </div>
-              <button
-                type="submit"
-                className="w-full text-white bg-blue-700 hover:bg-blue-800 bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-              >
-                Reset passwod
-              </button>
+              <Link to="/Login">
+                <button
+                  type="submit"
+                  className="mt-6 w-full text-white bg-violet-700 hover:bg-violet-600 bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                >
+                  Reset passwod
+                </button>
+              </Link>
             </form>
           </div>
         </div>

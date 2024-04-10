@@ -72,7 +72,7 @@ function footer() {
               </div>
             </div>
           </div>
-          <hr className="my-6 sm:mx-auto lg:my-8" />
+          <hr className="bg-black my-6 sm:mx-auto lg:my-8 h-px" />
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className="text-sm  sm:text-center">
               © 2023{" "}
