@@ -11,6 +11,7 @@ import Signup from "./components/Signup-page.jsx";
 import ForgetPasword from "./components/Forget-password.jsx";
 import { Provider } from 'react-redux';
 import store from './redux/store.js';
+import Cart from "./components/Cart.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,15 +20,15 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       {
-        path: "/About",
+        path: "/about",
         element: <About />,
       },
       {
-        path: "/Product",
+        path: "/product",
         element: <Product />,
       },
       {
-        path: "/Contact",
+        path: "/contact",
         element: <Contact />,
       },
       {
@@ -35,13 +36,17 @@ const router = createBrowserRouter([
         element: <Login />,
       },
       {
-        path: "/Signup",
+        path: "/signup",
         element: <Signup />,
       },
       {
-        path: "/ForgetPasword",
+        path: "/forgetpasword",
         element: <ForgetPasword />,
       },
+      {
+        path: '/cart',
+        element: <Cart />
+      }
     ],
   },
 ]);
