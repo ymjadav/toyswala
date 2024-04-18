@@ -11,7 +11,6 @@ import Signup from "./components/Signup-page.jsx";
 import ForgetPasword from "./components/Forget-password.jsx";
 import { Provider } from 'react-redux';
 import store from './redux/store.js';
-
 import Cart from "./components/Cart.jsx";
 
 
