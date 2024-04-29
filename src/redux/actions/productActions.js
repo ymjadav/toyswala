@@ -25,14 +25,14 @@ export const removeSelectedProduct = () => {
 export const addToCart = (product) => {
     return {
         type: ActionTypes.ADD_TO_CART,
-        paylaod: product
+        payload: product
     }
 }
 
 export const removeFromCart = (product) => {
     return {
         type: ActionTypes.REMOVE_ITEM,
-        paylaod: product
+        payload: product
     }
 }
 
@@ -47,6 +47,20 @@ export const deleteFromCart = (product) => {
 export const placeOrder = (orderData) => {
     return {
         type: ActionTypes.PLACE_ORDER,
-        paylaod: orderData
+        payload: orderData
+    }
+}
+
+export const addToWishList = (product) => {
+    return {
+        type: ActionTypes.ADD_TO_WISHLIST,
+        payload: product
+    }
+}
+
+export const removeFromWishlist = (product) => {
+    return {
+        type: ActionTypes.REMOVE_FROM_WISHLIST,
+        payload: product
     }
 }
