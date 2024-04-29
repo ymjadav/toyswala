@@ -12,6 +12,8 @@ import ForgetPasword from "./components/Forget-password.jsx";
 import { Provider } from 'react-redux';
 import store from './redux/store.js';
 import Cart from "./components/Cart.jsx";
+import ProductDetail from "./components/ProductDetail.jsx";
+import WishList from "./components/Wishlist.jsx";
 
 
 const router = createBrowserRouter([
@@ -47,6 +49,14 @@ const router = createBrowserRouter([
       {
         path: '/cart',
         element: <Cart />
+      },
+      {
+        path: '/product/:productId',
+        element: <ProductDetail />
+      },
+      {
+        path: '/wishlist',
+        element: <WishList />
       }
     ],
   },

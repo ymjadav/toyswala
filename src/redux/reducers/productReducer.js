@@ -4,14 +4,6 @@ const initialState = {
     products: []
 }
 
-const cartState = {
-    cart: [],
-    totalQuantity: 0,
-    totalPrice: 0
-}
-
-
-
 export const productReducer = (state = initialState, { type, payload }) => {
     switch (type) {
         case ActionTypes.SET_PRODUCTS:
@@ -20,3 +12,17 @@ export const productReducer = (state = initialState, { type, payload }) => {
             return state
     }
 }
+
+export const selectedProductReducer = (state = {}, { type, payload }) => {
+    switch (type) {
+        case ActionTypes.SELETCED_PRODUCT:
+            return { ...state, ...payload }
+        case ActionTypes.REMOVE_SELETCED_PRODUCT:
+            return {}
+        default:
+            return state;
+    }
+}
+
+
+
