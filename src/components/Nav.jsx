@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/toywala-logo-transparent.png";
+import logo from "../assets/toywala-high-resolution-logo-transparent.png";
 function Nav() {
   return (
     <div className="">
@@ -71,7 +71,7 @@ function Nav() {
             />
           </svg>
           {/* wishlist icon */}
-          <Link to={'/wishlist'}>
+          <Link to={"/wishlist"}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -88,7 +88,7 @@ function Nav() {
             </svg>
           </Link>
           {/* shopping cart */}
-          <Link to={'/cart'}>
+          <Link to={"/cart"}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

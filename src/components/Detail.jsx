@@ -9,10 +9,12 @@ function footer() {
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
               <a href="/" className="flex items-center">
-                <img src="" className="h-8 me-3" alt="logo" />
-                <span className="self-center text-2xl font-semibold whitespace-nowrap ">
-                  TOYWALA
-                </span>
+                <img
+                  src="src/assets/toywala-high-resolution-logo-transparent.png"
+                  className="h-20 me-3"
+                  alt="logo"
+                />
+                <span className="self-center text-2xl font-semibold whitespace-nowrap "></span>
               </a>
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -20,15 +22,12 @@ function footer() {
                 <h2 className="mb-6 text-sm font-semibold ">Resources</h2>
                 <ul className=" font-medium">
                   <li className="mb-4">
-                    <a href="https://flowbite.com/" className="hover:underline">
+                    <a href="#" className="hover:underline">
                       TOYWALA
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="https://tailwindcss.com/"
-                      className="hover:underline"
-                    >
+                    <a href="#" className="hover:underline">
                       TOYWALA
                     </a>
                   </li>
@@ -38,18 +37,12 @@ function footer() {
                 <h2 className="mb-6 text-sm font-semibold">Follow us</h2>
                 <ul className="font-medium">
                   <li className="mb-4">
-                    <a
-                      href="https://github.com/themesberg/flowbite"
-                      className="hover:underline "
-                    >
+                    <a href="#" className="hover:underline ">
                       Github
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="https://discord.gg/4eeurUVvTy"
-                      className="hover:underline"
-                    >
+                    <a href="#" className="hover:underline">
                       Discord
                     </a>
                   </li>
@@ -76,7 +69,7 @@ function footer() {
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className="text-sm  sm:text-center">
               © 2023{" "}
-              <a href="https://flowbite.com/" className="hover:underline">
+              <a href="#" className="hover:underline">
                 TOYWALA™
               </a>
               . All Rights Reserved.
