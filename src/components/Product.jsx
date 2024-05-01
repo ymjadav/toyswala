@@ -29,7 +29,7 @@ function Product() {
           <h3 className="text-[20px] font-bold absolute top-14">$ {price + ".00"}</h3>
           <Link to={`/product/${id}`}>
             <button
-              className="absolute top-24 w-[270px] text-yellow-500 border-solid border-2 border-yellow-500 h-10 rounded transition duration-500 ease-in hover:border-yellow-300 hover:transition hover:duration-500 hover:ease-out hover:shadow-lg"
+              className="absolute top-24 w-[270px] bg-stone-900 text-white h-10 rounded transition duration-500 ease-in hover:border-black hover:border-2 hover:transition hover:duration-500 hover:ease-out hover:bg-transparent hover:text-black"
             >View Product</button>
           </Link>
           <button

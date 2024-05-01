@@ -14,12 +14,12 @@ export const cartReducer = (state = cartState, { type, payload }) => {
             const exist = state.cart.find((product) => product.id === payload.id)
             if (exist) {
                 const updatedCart = state.cart.map(product =>
-                    product.id === payload.id ? { ...product, quantity: product.quantity + 1, totalPrice: product.totalPrice + payload.price, image: payload.image } : product
+                    product.id === payload.id ? { ...product, quantity: product.quantity + payload.quantity, totalPrice: product.totalPrice + payload.price, image: payload.image } : product
                 )
                 return {
                     ...state,
                     cart: updatedCart,
-                    totalQuantity: state.totalQuantity + 1,
+                    totalQuantity: state.totalQuantity + payload.quantity,
                     totalPrice: state.totalPrice + payload.price
                 }
             } else {
@@ -37,7 +37,7 @@ export const cartReducer = (state = cartState, { type, payload }) => {
                             image: payload.image
                         }
                     ],
-                    totalQuantity: state.totalQuantity + 1,
+                    totalQuantity: state.totalQuantity + payload.quantity,
                     totalPrice: state.totalPrice + payload.price
                 }
             }
