@@ -23,6 +23,8 @@ export const wishListReducer = (state = wishlistState, { type, payload }) => {
 
                     ]
                 }
+            } else {
+                return state
             }
 
         case ActionTypes.REMOVE_FROM_WISHLIST:
