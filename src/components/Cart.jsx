@@ -1,7 +1,6 @@
 import { PiShoppingCartDuotone } from "react-icons/pi";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, deleteFromCart, placeOrder, removeFromCart } from "../redux/actions/productActions";
-import dummyImg from '../assets/dummyImg.jpeg';
 import { MdOutlineDeleteSweep } from "react-icons/md";
 
 function Cart() {
@@ -67,7 +66,9 @@ function Cart() {
                     <h1 className="text-slate-400 font-light">Taxes and shipping calculated at checkout</h1>
 
                     <button
-                        className="w-[300px] bg-black text-white font-bold h-10 rounded transition ease-out duration-300 hover:bg-slate-800 hover:transition hover:ease-in hover:duration-300">
+                        className="w-[300px] bg-black text-white font-bold h-10 rounded transition ease-out duration-300 hover:bg-slate-800 hover:transition hover:ease-in hover:duration-300"
+                        onClick={() => handlePlaceOrder()}
+                    >
                         Check Out
                     </button>
                 </div>
