@@ -70,25 +70,25 @@ function ProductDetail() {
                 <img src={image?.src} alt={image?.alt} className="h-[500px] transition duration-500 ease-in-out rounded" onError={(e) => e.target.src = dummyIng} />
             </div>
             <div className="flex flex-col justify-center gap-y-3 w-[48%] ps-9">
-                <h1 className="font-bold text-3xl">{name}</h1>
-                <h2 className="font-bold text-red-600 text-2xl">$ {price}</h2>
-                <h2 className="font-bold text-xl text-slate-400">{category}</h2>
-                <p className="text-gray-500">{description}</p>
+                <h1 className="font-bold text-3xl font-kanit">{name}</h1>
+                <h2 className="font-bold text-red-600 text-2xl font-kanit">$ {price}</h2>
+                <h2 className="font-bold text-xl text-slate-400 font-kanit">{category}</h2>
+                <p className="text-gray-500 font-kanit">{description}</p>
                 <div className="flex items-center justify-evenly border border-1 border-black h-10 w-[100px]">
                     <button
-                        className="text-xl hover:text-yellow-400"
+                        className="text-xl hover:text-yellow-400 font-kanit"
                         onClick={() => decQuantity()}
                     >-</button>
-                    {quantity}
+                    <span className="font-kanit">{quantity}</span>
                     <button
-                        className="text-xl hover:text-yellow-400"
+                        className="text-xl hover:text-yellow-400 font-kanit"
                         onClick={() => incQuanity()}
                     >+</button>
                 </div>
-                <p className={inStock ? "text-md text-green-600 font-bold" : "text-md text-red-600 font-bold"}>{inStock ? "In Stock" : "Out Of Stock"}</p>
+                <p className={inStock ? "text-md text-green-600 font-bold font-kanit" : "text-md text-red-600 font-bold font-kanit"}>{inStock ? "In Stock" : "Out Of Stock"}</p>
                 <div className="flex gap-10">
                     <button
-                        className={inStock ? "bg-green-600 w-[200px] h-[40px] text-white font-bold rounded-lg transition ease-in duration-300 hover:bg-green-500 hover:transition hover:ease-out hover:duration-300" : "bg-green-600 w-[200px] h-[40px] text-white font-bold rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"}
+                        className={inStock ? "bg-green-600 font-kanit w-[200px] h-[40px] text-white font-bold rounded-lg transition ease-in duration-300 hover:bg-green-500 hover:transition hover:ease-out hover:duration-300" : "bg-green-600 font-kanit w-[200px] h-[40px] text-white font-bold rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"}
                         disabled={!inStock}
                         onClick={() => dispatch(addToCart({
                             id: parseInt(productId),
@@ -101,7 +101,7 @@ function ProductDetail() {
                         }))}
                     >Add To Cart</button>
 
-                    <button className="border-solid border-2 border-yellow-400 text-yellow-400 w-[200px] h-[40px] font-bold transition ease-in duration-300 hover:text-yellow-500 hover:transition hover:ease-out hover:duration-300 hover:rounded">Add To Wishlist</button>
+                    <button className="border-solid border-2 font-kanit border-yellow-400 text-yellow-400 w-[200px] h-[40px] font-bold transition ease-in duration-300 hover:text-yellow-500 hover:transition hover:ease-out hover:duration-300 hover:rounded">Add To Wishlist</button>
                 </div>
 
             </div>
