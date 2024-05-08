@@ -26,7 +26,7 @@ function Product() {
           </div>
         </LazyLoad>
         <div className="flex flex-col bg-slate-100 h-[200px] rounded-br-lg rounded-bl-lg px-3 justify-start gap-y-[2px] relative">
-          <h2 className="text-[18px] text-pretty">{name}</h2>
+          <h2 className="text-[18px]  text-pretty">{name}</h2>
           <h3 className="text-[20px] font-bold absolute top-14">$ {price + ".00"}</h3>
           <Link to={`/product/${id}`}>
             <button
