@@ -8,11 +8,10 @@ function WishList() {
 
     const wishlist = useSelector(state => state.wishlist.wishlist);
     const dispatch = useDispatch();
-    console.log(wishlist);
 
     return (<>
         {wishlist.length > 0 ?
-            (<div className="w-full flex flex-col items-center mb-10">
+            (<div className="w-full flex flex-col items-center mb-10 font-kanit">
                 <h1 className="font-semibold text-4xl m-10">Your Wishlist</h1>
                 <div className="w-[70%] flex flex-wrap justify-center gap-8 mx-auto my-5">
                     {wishlist.map((item) => (
@@ -55,7 +54,7 @@ function WishList() {
                     ))}
                 </div>
             </div>) :
-            (<div className="flex flex-col items-center justify-center h-[650px]">
+            (<div className="flex flex-col items-center justify-center h-[650px] font-kanit">
                 <FaRegHeart className="text-[350px] text-gray-400" />
                 <h1 className="text-3xl font-bold">No Items In Your Wishlist</h1>
             </div>

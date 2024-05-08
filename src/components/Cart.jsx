@@ -8,18 +8,15 @@ function Cart() {
     const cart = useSelector(state => state.cart.cart);
     const totalQuantity = useSelector(state => state.cart.totalQuantity);
     const totalPrice = useSelector(state => state.cart.totalPrice);
-
     const dispatch = useDispatch();
 
     const handlePlaceOrder = () => {
         dispatch(placeOrder(cart));
     }
 
-
-
     return (<>
         {cart.length > 0 ?
-            (<div className="w-full flex flex-col items-center">
+            (<div className="w-full flex flex-col items-center font-kanit">
                 <h1 className="font-semibold text-4xl m-10 text-center">Your Cart</h1>
                 <div className='w-[80%]  my-10 border border-t-2 border-b-2 border-r-0 border-l-0'>
                     {cart.map((item, index) => (
@@ -64,7 +61,6 @@ function Cart() {
                     <h1 className="text-xl">Total Items {" "} <span className="text-slate-400">{totalQuantity}</span></h1>
                     <h1 className="text-xl">Subtotal {" "} <span className="text-slate-400"> $ {totalPrice + ".00"} </span></h1>
                     <h1 className="text-slate-400 font-light">Taxes and shipping calculated at checkout</h1>
-
                     <button
                         className="w-[300px] bg-black text-white font-bold h-10 rounded transition ease-out duration-300 hover:bg-slate-800 hover:transition hover:ease-in hover:duration-300"
                         onClick={() => handlePlaceOrder()}
@@ -73,7 +69,7 @@ function Cart() {
                     </button>
                 </div>
             </div>) :
-            (<div className='flex flex-col items-center justify-center h-[650px]'>
+            (<div className='flex flex-col items-center justify-center h-[650px] font-kanit'>
                 <PiShoppingCartDuotone className='text-[350px] text-gray-400' />
                 <h1 className='font-bold text-3xl'>Your cart is empty</h1>
             </div>)

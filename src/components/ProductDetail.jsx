@@ -65,7 +65,7 @@ function ProductDetail() {
 
 
     return (<>
-        <div className="flex justify-center mt-20 mb-20">
+        <div className="flex justify-center mt-20 mb-20 font-kanit">
             <div className="w-[48%] flex justify-center items-center">
                 <img src={image?.src} alt={image?.alt} className="h-[500px] transition duration-500 ease-in-out rounded" onError={(e) => e.target.src = dummyIng} />
             </div>
