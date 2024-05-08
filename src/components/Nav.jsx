@@ -4,7 +4,7 @@ function Nav() {
   return (
     <div className="">
       {/* fixed w-full */}
-      <div className="flex flex-row justify-around items-center bg-cyan-100 h-20">
+      <div className="flex flex-row justify-around items-center bg-yellow-100 h-20">
         <div className="flex-intial w-40 ">
           <img src={logo} className="logo h-14" alt="TOYWALA"></img>
         </div>
